@@ -1,17 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<android.support.design.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.zhou.player.MainActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/barlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+           <LinearLayout
+               android:id="@+id/ll_search"
+               android:layout_width="294dp"
+               android:layout_height="wrap_content"
+               android:background="@drawable/bg_search"
+               android:layout_marginLeft="0dp"
+               android:orientation="horizontal">
+               <ImageView
+                   android:layout_width="22dp"
+                   android:layout_height="22dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_gravity="center_vertical"
+                   android:background="@drawable/search"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:padding="6dp"
+                   android:text="周建龙"
+                   android:textSize="12sp"
+                   android:textColor="@color/textGray"/>
+           </LinearLayout>
+            <ImageView
+                android:id="@+id/iv_clock"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="26dp"
+                android:background="@drawable/clock"/>
+            </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabIndicatorColor="@color/textColorPrimary"
+            app:tabTextColor="@color/textGray"
+            app:tabSelectedTextColor="@color/textColorPrimary"
+            android:background="?attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_send_black_24dp" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+
