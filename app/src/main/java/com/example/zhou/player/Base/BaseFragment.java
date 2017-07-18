@@ -57,6 +57,7 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 1.如果没有数据,联网请求数据,并绑定到initview初始化的视图上
      * 2.如有数据,直接bangding
+     * 123456
      */
     protected  void initData(){}
 }
