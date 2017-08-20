@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context="com.example.zhou.player.Loading.SplashActivity">
+    tools:context=".modules.Loading.SplashActivity">
     <ImageView
         android:id="@+id/iv_splash"
         android:layout_width="160dp"

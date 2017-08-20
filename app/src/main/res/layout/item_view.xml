@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" 
     android:layout_height="match_parent">
-    <com.example.zhou.player.UIBySelf.ObservableScrollView
+    <com.example.zhou.player.common.UIBySelf.ObservableScrollView
         android:id="@+id/MenuMainScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"/>
-    </com.example.zhou.player.UIBySelf.ObservableScrollView>
+    </com.example.zhou.player.common.UIBySelf.ObservableScrollView>
 
     <include
         android:id="@+id/contentcontrolview"
